@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pmap - 外食でもプロテインを妥協しない</title>
+  <meta name="description" content="pmapは、周辺の飲食店のプロテイン量がひと目でわかるマップアプリ。筋トレ・ダイエット中の外食をもっとスマートに。">
+  <meta name="keywords" content="プロテイン, タンパク質, 外食, 飲食店, マップ, 筋トレ, ダイエット, 栄養">
+  <meta property="og:title" content="pmap - 外食でもプロテインを妥協しない">
+  <meta property="og:description" content="周辺の飲食店のプロテイン量がひと目でわかるマップアプリ">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <span class="logo-icon">📍</span>
+        <span class="logo-text">pmap</span>
+      </a>
+      <div class="nav-links">
+        <a href="#features">機能</a>
+        <a href="#how-it-works">使い方</a>
+        <a href="#preview">プレビュー</a>
+        <a href="#early-access" class="nav-cta">早期アクセス</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="メニュー">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#features" class="mobile-link">機能</a>
+    <a href="#how-it-works" class="mobile-link">使い方</a>
+    <a href="#preview" class="mobile-link">プレビュー</a>
+    <a href="#early-access" class="mobile-link nav-cta">早期アクセス</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-effects">
+      <div class="hero-glow hero-glow-1"></div>
+      <div class="hero-glow hero-glow-2"></div>
+      <div class="hero-glow hero-glow-3"></div>
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span>Coming Soon — 新宿エリアから</span>
+        </div>
+        <h1 class="hero-title">
+          外食でも<br>
+          <span class="gradient-text">プロテイン</span>を<br>
+          妥協しない。
+        </h1>
+        <p class="hero-description">
+          pmapは、周辺の飲食店メニューの<strong>タンパク質量</strong>がひと目でわかるマップアプリ。<br>
+          筋トレ・ダイエット中の外食を、もっとスマートに。
+        </p>
+        <div class="hero-actions">
+          <a href="#early-access" class="btn btn-primary">
+            <span>早期アクセスに登録</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a href="#features" class="btn btn-secondary">
+            <span>詳しく見る</span>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number" data-target="50">0</span><span class="stat-suffix">+</span>
+            <span class="stat-label">対応チェーン店</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-number" data-target="1000">0</span><span class="stat-suffix">+</span>
+            <span class="stat-label">メニュー登録数</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-number" data-target="100">0</span><span class="stat-suffix">%</span>
+            <span class="stat-label">無料で利用可能</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="phone-mockup">
+          <div class="phone-frame">
+            <div class="mockup-screen" id="heroMockup">
+              <!-- iOS Status Bar -->
+              <div class="mock-status">
+                <span class="mock-time">9:41</span>
+                <div class="mock-status-right">
+                  <svg width="15" height="11" viewBox="0 0 15 11" fill="currentColor">
+                    <rect x="0" y="7" width="3" height="4" rx=".5" />
+                    <rect x="4" y="4" width="3" height="7" rx=".5" />
+                    <rect x="8" y="1" width="3" height="10" rx=".5" />
+                    <rect x="12" y="0" width="3" height="11" rx=".5" />
+                  </svg>
+                  <svg width="22" height="11" viewBox="0 0 22 11" fill="currentColor">
+                    <rect x="0" y="1" width="18" height="9" rx="2" fill="none" stroke="currentColor" stroke-width="1" />
+                    <rect x="2" y="3" width="13" height="5" rx="1" />
+                    <rect x="19" y="3.5" width="2" height="4" rx="1" />
+                  </svg>
+                </div>
+              </div>
+              <!-- Search Bar -->
+              <div class="mock-search">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <circle cx="11" cy="11" r="7" />
+                  <path d="m20 20-4-4" />
+                </svg>
+                <span>新宿駅周辺</span>
+              </div>
+              <!-- Filter Chips -->
+              <div class="mock-chips">
+                <span class="mock-chip active">30g+</span>
+                <span class="mock-chip">和食</span>
+                <span class="mock-chip">洋食</span>
+                <span class="mock-chip">中華</span>
+              </div>
+              <!-- Map Area -->
+              <div class="mock-map" id="mockMap">
+                <svg class="mock-map-svg" viewBox="0 0 280 360" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="280" height="360" fill="#0f1525" />
+                  <rect x="0" y="60" width="280" height="8" fill="#1e2238" />
+                  <rect x="0" y="145" width="280" height="12" fill="#222840" />
+                  <rect x="0" y="230" width="280" height="8" fill="#1e2238" />
+                  <rect x="55" y="0" width="8" height="360" fill="#1e2238" />
+                  <rect x="135" y="0" width="12" height="360" fill="#222840" />
+                  <rect x="215" y="0" width="8" height="360" fill="#1e2238" />
+                  <rect x="4" y="4" width="48" height="53" rx="3" fill="#14182a" />
+                  <rect x="66" y="4" width="66" height="53" rx="3" fill="#161a2e" />
+                  <rect x="150" y="4" width="62" height="53" rx="3" fill="#14182a" />
+                  <rect x="226" y="4" width="50" height="53" rx="3" fill="#161a2e" />
+                  <rect x="4" y="71" width="48" height="71" rx="3" fill="#161a2e" />
+                  <rect x="66" y="71" width="66" height="71" rx="3" fill="#14182a" />
+                  <rect x="150" y="71" width="62" height="71" rx="3" fill="#161a2e" />
+                  <rect x="226" y="71" width="50" height="71" rx="3" fill="#14182a" />
+                  <rect x="4" y="160" width="48" height="67" rx="3" fill="#14182a" />
+                  <rect x="66" y="160" width="66" height="67" rx="3" fill="#161a2e" />
+                  <rect x="150" y="160" width="62" height="67" rx="3" fill="#14182a" />
+                  <rect x="226" y="160" width="50" height="67" rx="3" fill="#161a2e" />
+                  <rect x="4" y="241" width="48" height="66" rx="3" fill="#161a2e" />
+                  <rect x="66" y="241" width="66" height="66" rx="3" fill="#14182a" />
+                  <rect x="150" y="241" width="62" height="66" rx="3" fill="#161a2e" />
+                  <rect x="226" y="241" width="50" height="66" rx="3" fill="#14182a" />
+                  <line x1="0" y1="300" x2="280" y2="100" stroke="#2a2f48" stroke-width="2.5" stroke-dasharray="6 4" />
+                  <line x1="0" y1="306" x2="280" y2="106" stroke="#2a2f48" stroke-width="2.5" stroke-dasharray="6 4" />
+                  <rect x="95" y="182" width="70" height="26" rx="5" fill="#1c2038" stroke="#2d3350"
+                    stroke-width=".8" />
+                  <text x="130" y="199" text-anchor="middle" fill="#4a5578" font-size="10" font-family="sans-serif"
+                    font-weight="500">新宿駅</text>
+                  <rect x="4" y="241" width="48" height="66" rx="3" fill="rgba(34,197,94,0.06)" />
+                </svg>
+                <!-- Map Pins -->
+                <div class="mock-pin mock-pin-green" data-pin="0" style="top:12%;left:18%">
+                  <div class="mock-pin-pulse"></div>
+                  <div class="mock-pin-body">38g</div>
+                </div>
+                <div class="mock-pin mock-pin-green mock-pin-active" data-pin="1" style="top:28%;left:55%">
+                  <div class="mock-pin-pulse"></div>
+                  <div class="mock-pin-body">45g</div>
+                </div>
+                <div class="mock-pin mock-pin-yellow" data-pin="2" style="top:15%;left:78%">
+                  <div class="mock-pin-pulse"></div>
+                  <div class="mock-pin-body">28g</div>
+                </div>
+                <div class="mock-pin mock-pin-yellow" data-pin="3" style="top:52%;left:22%">
+                  <div class="mock-pin-pulse"></div>
+                  <div class="mock-pin-body">22g</div>
+                </div>
+                <div class="mock-pin mock-pin-red" data-pin="4" style="top:48%;left:70%">
+                  <div class="mock-pin-pulse"></div>
+                  <div class="mock-pin-body">12g</div>
+                </div>
+                <div class="mock-pin mock-pin-green" data-pin="5" style="top:68%;left:40%">
+                  <div class="mock-pin-pulse"></div>
+                  <div class="mock-pin-body">35g</div>
+                </div>
+              </div>
+              <!-- Bottom Card -->
+              <div class="mock-card" id="mockCard">
+                <div class="mock-card-handle"></div>
+                <div class="mock-card-header">
+                  <div class="mock-card-title">
+                    <span class="mock-card-emoji">💪</span>
+                    <div>
+                      <h4 id="mockCardName">筋肉食堂 新宿店</h4>
+                      <span class="mock-card-sub" id="mockCardInfo">⭐ 4.5 • 徒歩3分 • 営業中</span>
+                    </div>
+                  </div>
+                  <span class="mock-card-badge" id="mockCardBadge">High P</span>
+                </div>
+                <div class="mock-card-menus" id="mockCardMenus">
+                  <div class="mock-menu-row"><span>ステーキ定食</span><span class="mock-protein green">45g</span></div>
+                  <div class="mock-menu-row"><span>チキングリル</span><span class="mock-protein green">38g</span></div>
+                  <div class="mock-menu-row"><span>サーモン定食</span><span class="mock-protein green">32g</span></div>
+                </div>
+              </div>
+              <!-- Bottom Nav -->
+              <div class="mock-bottom-nav">
+                <div class="mock-nav-item active"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                  </svg><span>マップ</span></div>
+                <div class="mock-nav-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M3 4h18v2H3V4zm0 7h12v2H3v-2zm0 7h18v2H3v-2z" />
+                  </svg><span>リスト</span></div>
+                <div class="mock-nav-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                  </svg><span>マイページ</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="phone-glow"></div>
+        </div>
+        <div class="floating-card floating-card-1">
+          <span class="fc-emoji">🍗</span>
+          <span class="fc-text">チキングリル</span>
+          <span class="fc-protein">38g</span>
+        </div>
+        <div class="floating-card floating-card-2">
+          <span class="fc-emoji">🥩</span>
+          <span class="fc-text">ステーキ定食</span>
+          <span class="fc-protein">45g</span>
+        </div>
+        <div class="floating-card floating-card-3">
+          <span class="fc-emoji">🐟</span>
+          <span class="fc-text">サーモン刺身</span>
+          <span class="fc-protein">32g</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Features</span>
+        <h2 class="section-title">外食の<span class="gradient-text">プロテイン管理</span>を<br>もっとシンプルに</h2>
+        <p class="section-subtitle">ジムの後、仕事の合間、友人との食事。いつでもプロテインを意識した店選びが可能に。</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card feature-card-large">
+          <div class="feature-icon-wrap">
+            <div class="feature-icon">🗺️</div>
+          </div>
+          <h3>プロテインマップ</h3>
+          <p>Google Mapsベースの直感的なマップUI。飲食店のプロテインスコアを<strong>色分けピン</strong>で表示。緑（30g+）、黄（15〜30g）、赤（15g未満）でひと目でわかる。</p>
+          <div class="feature-visual">
+            <div class="mini-pins">
+              <span class="mini-pin mp-green">🟢 38g</span>
+              <span class="mini-pin mp-yellow">🟡 22g</span>
+              <span class="mini-pin mp-green">🟢 45g</span>
+              <span class="mini-pin mp-red">🔴 8g</span>
+            </div>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-wrap">
+            <div class="feature-icon">🔍</div>
+          </div>
+          <h3>スマート検索</h3>
+          <p>「30g以上のメニューがある店」「和食で高プロテイン」など、プロテイン量でフィルタリング検索。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-wrap">
+            <div class="feature-icon">📊</div>
+          </div>
+          <h3>栄養素表示</h3>
+          <p>タンパク質量はもちろん、カロリー・脂質・炭水化物も表示。メニュー選びの判断をサポート。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-wrap">
+            <div class="feature-icon">📱</div>
+          </div>
+          <h3>リスト表示</h3>
+          <p>マップ⇄リストの切替表示。プロテイン量の多い順にソートして比較できる。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-wrap">
+            <div class="feature-icon">⚡</div>
+          </div>
+          <h3>瞬時に判断</h3>
+          <p>ピンをタップするだけで、店名・代表メニュー・最高プロテイン量がハーフモーダルで即表示。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">How It Works</span>
+        <h2 class="section-title">使い方は<span class="gradient-text">3ステップ</span></h2>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">01</div>
+          <div class="step-icon">📍</div>
+          <h3>マップを開く</h3>
+          <p>現在地周辺の飲食店がプロテインスコアの色分けピンで表示されます。</p>
+        </div>
+        <div class="step-connector">
+          <svg width="40" height="24" viewBox="0 0 40 24" fill="none">
+            <path d="M0 12h36M28 4l8 8-8 8" stroke="url(#arrow-gradient)" stroke-width="2" />
+            <defs>
+              <linearGradient id="arrow-gradient" x1="0" y1="12" x2="40" y2="12">
+                <stop stop-color="#22c55e" />
+                <stop offset="1" stop-color="#4ade80" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="step-card">
+          <div class="step-number">02</div>
+          <div class="step-icon">👆</div>
+          <h3>お店をタップ</h3>
+          <p>気になるピンをタップすると、メニューのプロテイン量が一覧で表示されます。</p>
+        </div>
+        <div class="step-connector">
+          <svg width="40" height="24" viewBox="0 0 40 24" fill="none">
+            <path d="M0 12h36M28 4l8 8-8 8" stroke="url(#arrow-gradient2)" stroke-width="2" />
+            <defs>
+              <linearGradient id="arrow-gradient2" x1="0" y1="12" x2="40" y2="12">
+                <stop stop-color="#22c55e" />
+                <stop offset="1" stop-color="#4ade80" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="step-card">
+          <div class="step-number">03</div>
+          <div class="step-icon">🍽️</div>
+          <h3>高プロテインを選ぶ</h3>
+          <p>メニューをプロテイン量でソート。最適な一品を素早く見つけられます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- App Preview -->
+  <section class="preview" id="preview">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Preview</span>
+        <h2 class="section-title">アプリ<span class="gradient-text">プレビュー</span></h2>
+        <p class="section-subtitle">新宿エリアの飲食店をプロテイン量で可視化。直感的なマップ体験をお届けします。</p>
+      </div>
+      <div class="preview-showcase">
+        <div class="preview-phone">
+          <div class="mockup-screen mockup-detail-screen">
+            <!-- Status Bar -->
+            <div class="mock-status">
+              <span class="mock-time">9:41</span>
+              <div class="mock-status-right">
+                <svg width="15" height="11" viewBox="0 0 15 11" fill="currentColor">
+                  <rect x="0" y="7" width="3" height="4" rx=".5" />
+                  <rect x="4" y="4" width="3" height="7" rx=".5" />
+                  <rect x="8" y="1" width="3" height="10" rx=".5" />
+                  <rect x="12" y="0" width="3" height="11" rx=".5" />
+                </svg>
+                <svg width="22" height="11" viewBox="0 0 22 11" fill="currentColor">
+                  <rect x="0" y="1" width="18" height="9" rx="2" fill="none" stroke="currentColor" stroke-width="1" />
+                  <rect x="2" y="3" width="13" height="5" rx="1" />
+                  <rect x="19" y="3.5" width="2" height="4" rx="1" />
+                </svg>
+              </div>
+            </div>
+            <!-- Nav Header -->
+            <div class="mock-detail-header">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7" />
+              </svg>
+              <span>筋肉食堂 新宿店</span>
+            </div>
+            <!-- Restaurant Info -->
+            <div class="mock-detail-info">
+              <div class="mock-detail-badges"><span>⭐ 4.5</span><span>📍 徒歩3分</span><span
+                  class="mock-open-tag">営業中</span></div>
+              <p class="mock-detail-addr">東京都新宿区西新宿1-2-3</p>
+            </div>
+            <div class="mock-divider"></div>
+            <!-- Menu Header -->
+            <div class="mock-detail-menu-header">
+              <span>メニュー</span>
+              <span class="mock-sort-label">🔽 P量順</span>
+            </div>
+            <!-- Menu Items -->
+            <div class="mock-detail-menu-list">
+              <div class="mock-detail-menu-item">
+                <div>
+                  <div class="mock-item-name">ステーキ定食（200g）</div>
+                  <div class="mock-item-sub">¥1,280 • 650kcal • 脂質24g</div>
+                </div>
+                <div class="mock-protein-tag mock-tag-green">45g</div>
+              </div>
+              <div class="mock-detail-menu-item">
+                <div>
+                  <div class="mock-item-name">チキングリル定食</div>
+                  <div class="mock-item-sub">¥980 • 520kcal • 脂質12g</div>
+                </div>
+                <div class="mock-protein-tag mock-tag-green">38g</div>
+              </div>
+              <div class="mock-detail-menu-item">
+                <div>
+                  <div class="mock-item-name">サーモン定食</div>
+                  <div class="mock-item-sub">¥1,100 • 480kcal • 脂質18g</div>
+                </div>
+                <div class="mock-protein-tag mock-tag-green">32g</div>
+              </div>
+              <div class="mock-detail-menu-item">
+                <div>
+                  <div class="mock-item-name">パスタランチ</div>
+                  <div class="mock-item-sub">¥850 • 720kcal • 脂質28g</div>
+                </div>
+                <div class="mock-protein-tag mock-tag-yellow">18g</div>
+              </div>
+              <div class="mock-detail-menu-item">
+                <div>
+                  <div class="mock-item-name">カルボナーラ</div>
+                  <div class="mock-item-sub">¥900 • 830kcal • 脂質35g</div>
+                </div>
+                <div class="mock-protein-tag mock-tag-red">14g</div>
+              </div>
+            </div>
+            <!-- Bottom Nav -->
+            <div class="mock-bottom-nav">
+              <div class="mock-nav-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                </svg><span>マップ</span></div>
+              <div class="mock-nav-item active"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M3 4h18v2H3V4zm0 7h12v2H3v-2zm0 7h18v2H3v-2z" />
+                </svg><span>リスト</span></div>
+              <div class="mock-nav-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                </svg><span>マイページ</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Target Users -->
+  <section class="target-users">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">For You</span>
+        <h2 class="section-title">こんな人に<span class="gradient-text">おすすめ</span></h2>
+      </div>
+      <div class="users-grid">
+        <div class="user-card">
+          <div class="user-icon">💪</div>
+          <h3>筋トレ・ボディメイク中の方</h3>
+          <p>外食でもタンパク質をしっかり摂りたい。ジムの後のご飯選びに最適。</p>
+        </div>
+        <div class="user-card">
+          <div class="user-icon">🏃‍♀️</div>
+          <h3>ダイエット中の方</h3>
+          <p>高タンパク・低カロリーな外食先を素早く見つけたい方に。</p>
+        </div>
+        <div class="user-card">
+          <div class="user-icon">🏋️</div>
+          <h3>アスリート・トレーナー</h3>
+          <p>選手やクライアントへの外食先の推薦に活用。チームでの食事にも。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Early Access -->
+  <section class="early-access" id="early-access">
+    <div class="section-container">
+      <div class="ea-wrapper">
+        <div class="ea-content">
+          <span class="section-tag">Early Access</span>
+          <h2 class="ea-title">いち早く<span class="gradient-text">pmap</span>を<br>体験しませんか？</h2>
+          <p class="ea-description">現在、新宿エリアを対象に開発中です。リリース時に優先的にご案内します。</p>
+          <form class="ea-form" id="earlyAccessForm">
+            <div class="form-group">
+              <input type="email" id="emailInput" placeholder="メールアドレスを入力" required autocomplete="email">
+              <button type="submit" class="btn btn-primary btn-form">
+                <span>登録する</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+            <p class="form-note">🔒 スパムは送りません。リリース情報のみお届けします。</p>
+          </form>
+          <div class="ea-success" id="eaSuccess" style="display:none;">
+            <div class="success-icon">✅</div>
+            <h3>登録ありがとうございます！</h3>
+            <p>リリース時にメールでお知らせします。</p>
+          </div>
+        </div>
+        <div class="ea-visual">
+          <div class="ea-stats">
+            <div class="ea-stat-card">
+              <span class="ea-stat-icon">🎯</span>
+              <span class="ea-stat-label">対象エリア</span>
+              <span class="ea-stat-value">新宿</span>
+            </div>
+            <div class="ea-stat-card">
+              <span class="ea-stat-icon">📅</span>
+              <span class="ea-stat-label">リリース予定</span>
+              <span class="ea-stat-value">2026年</span>
+            </div>
+            <div class="ea-stat-card">
+              <span class="ea-stat-icon">💰</span>
+              <span class="ea-stat-label">価格</span>
+              <span class="ea-stat-value">無料</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a href="#" class="footer-logo">
+            <span class="logo-icon">📍</span>
+            <span class="logo-text">pmap</span>
+          </a>
+          <p class="footer-tagline">外食でもプロテインを妥協しない。</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>プロダクト</h4>
+            <a href="#features">機能</a>
+            <a href="#how-it-works">使い方</a>
+            <a href="#preview">プレビュー</a>
+          </div>
+          <div class="footer-col">
+            <h4>サポート</h4>
+            <a href="#">お問い合わせ</a>
+            <a href="#">プライバシーポリシー</a>
+            <a href="#">利用規約</a>
+          </div>
+          <div class="footer-col">
+            <h4>SNS</h4>
+            <a href="#">X (Twitter)</a>
+            <a href="#">Instagram</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 pmap. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
