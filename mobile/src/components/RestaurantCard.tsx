@@ -26,7 +26,7 @@ export default function RestaurantCard({ restaurant, onClose, onDetail }: Props)
           <View style={{ flex: 1 }}>
             <Text style={styles.name}>{restaurant.name}</Text>
             <Text style={styles.info}>
-              ⭐ {restaurant.rating} • 徒歩{restaurant.walkMinutes}分 •{' '}
+              <Ionicons name="star" size={12} color="#facc15" /> {restaurant.rating} • 徒歩{restaurant.walkMinutes}分 •{' '}
               <Text style={restaurant.isOpen ? styles.open : styles.closed}>
                 {restaurant.isOpen ? '営業中' : '準備中'}
               </Text>

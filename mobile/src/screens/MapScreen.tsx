@@ -71,10 +71,10 @@ export default function MapScreen({ onSelectRestaurant }: Props) {
         <View style={styles.listItemLeft}>
           <Text style={styles.listItemName}>{item.name}</Text>
           <Text style={styles.listItemInfo}>
-            ⭐ {item.rating} • 徒歩{item.walkMinutes}分 • {item.genre}
+            <Ionicons name="star" size={12} color="#facc15" /> {item.rating} • 徒歩{item.walkMinutes}分 • {item.genre}
           </Text>
           <Text style={styles.listItemMenu}>
-            🏆 {item.menus.sort((a, b) => b.protein - a.protein)[0]?.name}
+            <Ionicons name="trophy" size={12} color={Colors.green400} /> {item.menus.sort((a, b) => b.protein - a.protein)[0]?.name}
           </Text>
         </View>
         <View style={[styles.listProteinBadge, { backgroundColor: ProteinColors[level].bg }]}>
@@ -94,7 +94,10 @@ export default function MapScreen({ onSelectRestaurant }: Props) {
       <View style={styles.header}>
         <View style={styles.headerTop}>
           <View>
-            <Text style={styles.headerTitle}>📍 pmap</Text>
+            <View style={{ flexDirection: 'row', alignItems: 'center', gap: 4 }}>
+              <Ionicons name="location" size={20} color={Colors.green500} />
+              <Text style={styles.headerTitle}>pmap</Text>
+            </View>
             <Text style={styles.headerSub}>新宿エリア</Text>
           </View>
           <TouchableOpacity

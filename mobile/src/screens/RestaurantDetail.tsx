@@ -27,8 +27,12 @@ export default function RestaurantDetail({ restaurant, onBack }: Props) {
         {/* Info */}
         <View style={styles.infoSection}>
           <View style={styles.infoBadges}>
-            <Text style={styles.infoItem}>⭐ {restaurant.rating}</Text>
-            <Text style={styles.infoItem}>📍 徒歩{restaurant.walkMinutes}分</Text>
+            <Text style={styles.infoItem}>
+              <Ionicons name="star" size={12} color="#facc15" /> {restaurant.rating}
+            </Text>
+            <Text style={styles.infoItem}>
+              <Ionicons name="location" size={12} color={Colors.textSecondary} /> 徒歩{restaurant.walkMinutes}分
+            </Text>
             <Text style={[styles.infoItem, restaurant.isOpen ? styles.openBadge : styles.closedBadge]}>
               {restaurant.isOpen ? '営業中' : '準備中'}
             </Text>
@@ -43,7 +47,10 @@ export default function RestaurantDetail({ restaurant, onBack }: Props) {
         {/* Menu Header */}
         <View style={styles.menuHeader}>
           <Text style={styles.menuHeaderTitle}>メニュー</Text>
-          <Text style={styles.sortLabel}>🔽 P量順</Text>
+          <View style={{ flexDirection: 'row', alignItems: 'center', gap: 4 }}>
+            <Ionicons name="caret-down" size={12} color={Colors.green400} />
+            <Text style={styles.sortLabel}>P量順</Text>
+          </View>
         </View>
 
         {/* Menu List */}
