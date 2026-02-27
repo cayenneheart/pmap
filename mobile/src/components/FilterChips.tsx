@@ -44,21 +44,21 @@ const styles = StyleSheet.create({
   chip: {
     paddingHorizontal: 16,
     paddingVertical: 8,
-    borderRadius: 20,
-    backgroundColor: 'rgba(255,255,255,0.06)',
+    borderRadius: 100,
+    backgroundColor: '#0a0a0f',
     borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.08)',
+    borderColor: 'rgba(34, 197, 94, 0.4)',
   },
   chipActive: {
-    backgroundColor: 'rgba(34, 197, 94, 0.15)',
-    borderColor: 'rgba(34, 197, 94, 0.3)',
+    backgroundColor: '#22c55e',
+    borderColor: '#22c55e',
   },
   chipText: {
     fontSize: 13,
     fontWeight: '600',
-    color: '#8890a8',
+    color: '#4ade80',
   },
   chipTextActive: {
-    color: Colors.green400,
+    color: '#0a0a0f',
   },
 });

@@ -11,11 +11,11 @@ import RestaurantCard from '../components/RestaurantCard';
 
 // Apple Maps dark style JSON
 const darkMapStyle = [
-  { elementType: 'geometry', stylers: [{ color: '#1d2c4d' }] },
-  { elementType: 'labels.text.fill', stylers: [{ color: '#8ec3b9' }] },
-  { elementType: 'labels.text.stroke', stylers: [{ color: '#1a3646' }] },
-  { featureType: 'road', elementType: 'geometry', stylers: [{ color: '#304a7d' }] },
-  { featureType: 'water', elementType: 'geometry', stylers: [{ color: '#17263c' }] },
+  { elementType: 'geometry', stylers: [{ color: '#0a0a0f' }] },
+  { elementType: 'labels.text.fill', stylers: [{ color: '#f0f0f5' }] },
+  { elementType: 'labels.text.stroke', stylers: [{ color: '#111118' }] },
+  { featureType: 'road', elementType: 'geometry', stylers: [{ color: '#1a1f2e' }] },
+  { featureType: 'water', elementType: 'geometry', stylers: [{ color: '#0f1423' }] },
 ];
 
 const PIN_COLORS = {
@@ -134,11 +134,19 @@ export default function MapScreen({ onSelectRestaurant }: Props) {
             style={styles.map}
             initialRegion={SHINJUKU_CENTER}
             userInterfaceStyle="dark"
+            customMapStyle={darkMapStyle}
             showsUserLocation
             showsMyLocationButton={false}
           >
             {filteredRestaurants.map((restaurant) => {
               const level = getProteinLevel(restaurant.maxProtein);
+              const levelColors = {
+                high: { text: '#22c55e', bg: 'rgba(34, 197, 94, 0.15)', border: 'rgba(34, 197, 94, 0.5)' },
+                mid: { text: '#facc15', bg: 'rgba(250, 204, 21, 0.15)', border: 'rgba(250, 204, 21, 0.5)' },
+                low: { text: '#f87171', bg: 'rgba(248, 113, 113, 0.15)', border: 'rgba(248, 113, 113, 0.5)' }
+              };
+              const col = levelColors[level];
+
               return (
                 <Marker
                   key={restaurant.id}
@@ -147,10 +155,9 @@ export default function MapScreen({ onSelectRestaurant }: Props) {
                     longitude: restaurant.longitude,
                   }}
                   onPress={() => handlePinPress(restaurant)}
-                  pinColor={PIN_COLORS[level]}
                 >
-                  <View style={[styles.pinContainer, { borderColor: PIN_COLORS[level] }]}>
-                    <Text style={[styles.pinText, { color: PIN_COLORS[level] }]}>
+                  <View style={[styles.pinContainer, { backgroundColor: col.bg, borderColor: col.border }]}>
+                    <Text style={[styles.pinText, { color: col.text }]}>
                       {restaurant.maxProtein}g
                     </Text>
                   </View>
@@ -226,14 +233,22 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   pinContainer: {
-    backgroundColor: 'rgba(10, 10, 15, 0.9)',
-    paddingHorizontal: 8,
-    paddingVertical: 4,
-    borderRadius: 10,
-    borderWidth: 2,
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: 100,
+    borderWidth: 1.5,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    // Shadow for iOS / Elevation for Android
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.5,
+    shadowRadius: 4,
+    elevation: 4,
   },
   pinText: {
-    fontSize: 12,
+    fontSize: 13,
     fontWeight: '800',
   },
   resultBadge: {

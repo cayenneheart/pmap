@@ -14,7 +14,7 @@ export default function SearchBar({ value, onChangeText }: Props) {
       <Ionicons name="search" size={18} color={Colors.textMuted} />
       <TextInput
         style={styles.input}
-        placeholder="エリア・店名で検索"
+        placeholder="新宿駅周辺で探す"
         placeholderTextColor={Colors.textMuted}
         value={value}
         onChangeText={onChangeText}
@@ -33,12 +33,14 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 10,
-    backgroundColor: 'rgba(255,255,255,0.08)',
-    borderRadius: 14,
-    paddingHorizontal: 16,
-    paddingVertical: 12,
+    backgroundColor: '#111118',
+    borderRadius: 100,
+    paddingHorizontal: 18,
+    paddingVertical: 14,
     marginHorizontal: 16,
     marginBottom: 10,
+    borderWidth: 1,
+    borderColor: 'rgba(255, 255, 255, 0.08)',
   },
   input: {
     flex: 1,
