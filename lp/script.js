@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCountUp();
   initEarlyAccess();
   initMockupDemo();
+  initFAQ();
 });
 
 // ===========================
@@ -57,7 +58,7 @@ function initMobileMenu() {
 // ===========================
 function initScrollReveal() {
   const elements = document.querySelectorAll(
-    '.feature-card, .step-card, .user-card, .ea-stat-card, .section-header, .preview-showcase'
+    '.feature-card, .step-card, .user-card, .voice-card, .faq-item, .ea-stat-card, .section-header, .preview-showcase'
   );
 
   elements.forEach(el => el.classList.add('scroll-reveal'));
@@ -152,6 +153,34 @@ function initEarlyAccess() {
       emails.push({ email, date: new Date().toISOString() });
       localStorage.setItem('pmap_early_access', JSON.stringify(emails));
     }, 1000);
+  });
+}
+
+// ===========================
+// FAQ Accordion
+// ===========================
+function initFAQ() {
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+
+    question.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+
+      // Close all others
+      faqItems.forEach(otherItem => {
+        otherItem.classList.remove('active');
+        otherItem.querySelector('.faq-answer').style.maxHeight = null;
+      });
+
+      // Toggle current
+      if (!isActive) {
+        item.classList.add('active');
+        answer.style.maxHeight = answer.scrollHeight + "px";
+      }
+    });
   });
 }
 

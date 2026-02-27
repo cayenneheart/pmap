@@ -15,7 +15,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 
 <body>
@@ -23,13 +23,19 @@
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="#" class="nav-logo">
-        <span class="logo-icon">📍</span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2" class="logo-icon"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+          <circle cx="12" cy="10" r="3" />
+        </svg>
         <span class="logo-text">pmap</span>
       </a>
       <div class="nav-links">
         <a href="#features">機能</a>
         <a href="#how-it-works">使い方</a>
         <a href="#preview">プレビュー</a>
+        <a href="#voices">ユーザーの声</a>
         <a href="#early-access" class="nav-cta">早期アクセス</a>
       </div>
       <button class="nav-toggle" id="navToggle" aria-label="メニュー">
@@ -45,6 +51,7 @@
     <a href="#features" class="mobile-link">機能</a>
     <a href="#how-it-works" class="mobile-link">使い方</a>
     <a href="#preview" class="mobile-link">プレビュー</a>
+    <a href="#voices" class="mobile-link">ユーザーの声</a>
     <a href="#early-access" class="mobile-link nav-cta">早期アクセス</a>
   </div>
 
@@ -68,7 +75,8 @@
           妥協しない。
         </h1>
         <p class="hero-description">
-          pmapは、周辺の飲食店メニューの<strong>タンパク質量</strong>がひと目でわかるマップアプリ。<br>
+          pmapは、周辺の飲食店メニューの<strong>タンパク質量</strong>が<br>
+          ひと目でわかるマップアプリ。<br>
           筋トレ・ダイエット中の外食を、もっとスマートに。
         </p>
         <div class="hero-actions">
@@ -200,7 +208,18 @@
                 <div class="mock-card-handle"></div>
                 <div class="mock-card-header">
                   <div class="mock-card-title">
-                    <span class="mock-card-emoji">💪</span>
+                    <span class="mock-card-emoji">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m14.4 14.4-4.8-4.8" />
+                        <path
+                          d="M18.657 21.485a2 2 0 1 1-2.829-2.828l-1.767 1.768a2 2 0 1 1-2.829-2.829l6.364-6.364a2 2 0 1 1 2.829 2.829l-1.768 1.767a2 2 0 1 1 2.828 2.829z" />
+                        <path d="m21.5 21.5-1.4-1.4" />
+                        <path d="M3.9 3.9 2.5 2.5" />
+                        <path
+                          d="M6.404 2.757a2 2 0 1 0-2.829 2.828l1.768-1.767a2 2 0 1 0 2.829 2.828L1.808 13.01a2 2 0 1 0-2.829-2.829l1.767-1.768a2 2 0 1 0-2.829-2.828z" />
+                      </svg>
+                    </span>
                     <div>
                       <h4 id="mockCardName">筋肉食堂 新宿店</h4>
                       <span class="mock-card-sub" id="mockCardInfo">⭐ 4.5 • 徒歩3分 • 営業中</span>
@@ -232,21 +251,7 @@
           </div>
           <div class="phone-glow"></div>
         </div>
-        <div class="floating-card floating-card-1">
-          <span class="fc-emoji">🍗</span>
-          <span class="fc-text">チキングリル</span>
-          <span class="fc-protein">38g</span>
-        </div>
-        <div class="floating-card floating-card-2">
-          <span class="fc-emoji">🥩</span>
-          <span class="fc-text">ステーキ定食</span>
-          <span class="fc-protein">45g</span>
-        </div>
-        <div class="floating-card floating-card-3">
-          <span class="fc-emoji">🐟</span>
-          <span class="fc-text">サーモン刺身</span>
-          <span class="fc-protein">32g</span>
-        </div>
+
       </div>
     </div>
   </section>
@@ -257,15 +262,23 @@
       <div class="section-header">
         <span class="section-tag">Features</span>
         <h2 class="section-title">外食の<span class="gradient-text">プロテイン管理</span>を<br>もっとシンプルに</h2>
-        <p class="section-subtitle">ジムの後、仕事の合間、友人との食事。いつでもプロテインを意識した店選びが可能に。</p>
+        <p class="section-subtitle">ジムの後、仕事の合間、友人との食事。<br>いつでもプロテインを意識した店選びが可能に。</p>
       </div>
       <div class="features-grid">
         <div class="feature-card feature-card-large">
           <div class="feature-icon-wrap">
-            <div class="feature-icon">🗺️</div>
+            <svg class="feature-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M14.1 5.5a2 2 0 0 0 1.8 0l3.7-1.8A1 1 0 0 1 21 4.6v12.8a1 1 0 0 1-.6.9l-4.5 2.3a2 2 0 0 1-1.8 0l-4.2-2.1a2 2 0 0 0-1.8 0l-3.7 1.8A1 1 0 0 1 3 19.4V6.6a1 1 0 0 1 .6-.9l4.5-2.3a2 2 0 0 1 1.8 0z" />
+              <path d="M15 5.8v15" />
+              <path d="M9 3.2v15" />
+            </svg>
           </div>
           <h3>プロテインマップ</h3>
-          <p>Google Mapsベースの直感的なマップUI。飲食店のプロテインスコアを<strong>色分けピン</strong>で表示。緑（30g+）、黄（15〜30g）、赤（15g未満）でひと目でわかる。</p>
+          <p><span class="phrase">Google Mapsベースの直感的なマップUI。</span><span
+              class="phrase">飲食店のプロテインスコアを<strong>色分けピン</strong>で表示。</span><span
+              class="phrase">緑（30g+）、黄（15〜30g）、赤（15g未満）で</span><span class="phrase">ひと目でわかる。</span></p>
           <div class="feature-visual">
             <div class="mini-pins">
               <span class="mini-pin mp-green">🟢 38g</span>
@@ -277,31 +290,51 @@
         </div>
         <div class="feature-card">
           <div class="feature-icon-wrap">
-            <div class="feature-icon">🔍</div>
+            <svg class="feature-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.3-4.3" />
+            </svg>
           </div>
           <h3>スマート検索</h3>
-          <p>「30g以上のメニューがある店」「和食で高プロテイン」など、プロテイン量でフィルタリング検索。</p>
+          <p><span class="phrase">「30g以上のメニューがある店」</span><span class="phrase">「和食で高プロテイン」など、</span><span
+              class="phrase">プロテイン量でフィルタリング検索。</span></p>
         </div>
         <div class="feature-card">
           <div class="feature-icon-wrap">
-            <div class="feature-icon">📊</div>
+            <svg class="feature-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" x2="12" y1="20" y2="10" />
+              <line x1="18" x2="18" y1="20" y2="4" />
+              <line x1="6" x2="6" y1="20" y2="16" />
+            </svg>
           </div>
           <h3>栄養素表示</h3>
-          <p>タンパク質量はもちろん、カロリー・脂質・炭水化物も表示。メニュー選びの判断をサポート。</p>
+          <p><span class="phrase">タンパク質量はもちろん、</span><span class="phrase">カロリー・脂質・炭水化物も表示。</span><span
+              class="phrase">メニュー選びの判断をサポート。</span></p>
         </div>
         <div class="feature-card">
           <div class="feature-icon-wrap">
-            <div class="feature-icon">📱</div>
+            <svg class="feature-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
+              <path d="M12 18h.01" />
+            </svg>
           </div>
           <h3>リスト表示</h3>
-          <p>マップ⇄リストの切替表示。プロテイン量の多い順にソートして比較できる。</p>
+          <p><span class="phrase">マップ⇄リストの切替表示。</span><span class="phrase">プロテイン量の多い順にソートして</span><span
+              class="phrase">比較できる。</span></p>
         </div>
         <div class="feature-card">
           <div class="feature-icon-wrap">
-            <div class="feature-icon">⚡</div>
+            <svg class="feature-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+            </svg>
           </div>
           <h3>瞬時に判断</h3>
-          <p>ピンをタップするだけで、店名・代表メニュー・最高プロテイン量がハーフモーダルで即表示。</p>
+          <p><span class="phrase">ピンをタップするだけで、</span><span class="phrase">店名・代表メニュー・最高プロテイン量が</span><span
+              class="phrase">ハーフモーダルで即表示。</span></p>
         </div>
       </div>
     </div>
@@ -317,9 +350,14 @@
       <div class="steps-grid">
         <div class="step-card">
           <div class="step-number">01</div>
-          <div class="step-icon">📍</div>
+          <svg class="step-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#4ade80"
+            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin: 0 auto 20px;">
+            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
           <h3>マップを開く</h3>
-          <p>現在地周辺の飲食店がプロテインスコアの色分けピンで表示されます。</p>
+          <p><span class="phrase">現在地周辺の飲食店が</span><span class="phrase">プロテインスコアの</span><span
+              class="phrase">色分けピンで表示されます。</span></p>
         </div>
         <div class="step-connector">
           <svg width="40" height="24" viewBox="0 0 40 24" fill="none">
@@ -334,9 +372,17 @@
         </div>
         <div class="step-card">
           <div class="step-number">02</div>
-          <div class="step-icon">👆</div>
+          <svg class="step-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#4ade80"
+            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin: 0 auto 20px;">
+            <path d="M22 14a8 8 0 0 1-8 8" />
+            <path d="M18 11v-1a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0" />
+            <path
+              d="M14 10V9a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v1h-2.5a2.5 2.5 0 0 0-2.5 2.5c0 1.7 1.14 3.35 2.5 4.5s4 3 4 5V22" />
+            <path d="M10 4V3a2 2 0 0 1 2-2v0a2 2 0 0 1 2 2v1" />
+          </svg>
           <h3>お店をタップ</h3>
-          <p>気になるピンをタップすると、メニューのプロテイン量が一覧で表示されます。</p>
+          <p><span class="phrase">気になるピンをタップすると、</span><span class="phrase">メニューのプロテイン量が</span><span
+              class="phrase">一覧で表示されます。</span></p>
         </div>
         <div class="step-connector">
           <svg width="40" height="24" viewBox="0 0 40 24" fill="none">
@@ -351,9 +397,15 @@
         </div>
         <div class="step-card">
           <div class="step-number">03</div>
-          <div class="step-icon">🍽️</div>
+          <svg class="step-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#4ade80"
+            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin: 0 auto 20px;">
+            <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2" />
+            <path d="M7 2v20" />
+            <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7" />
+          </svg>
           <h3>高プロテインを選ぶ</h3>
-          <p>メニューをプロテイン量でソート。最適な一品を素早く見つけられます。</p>
+          <p><span class="phrase">メニューをプロテイン量でソート。</span><span class="phrase">最適な一品を</span><span
+              class="phrase">素早く見つけられます。</span></p>
         </div>
       </div>
     </div>
@@ -365,7 +417,7 @@
       <div class="section-header">
         <span class="section-tag">Preview</span>
         <h2 class="section-title">アプリ<span class="gradient-text">プレビュー</span></h2>
-        <p class="section-subtitle">新宿エリアの飲食店をプロテイン量で可視化。直感的なマップ体験をお届けします。</p>
+        <p class="section-subtitle">新宿エリアの飲食店をプロテイン量で可視化。<br>直感的なマップ体験をお届けします。</p>
       </div>
       <div class="preview-showcase">
         <div class="preview-phone">
@@ -473,19 +525,141 @@
       </div>
       <div class="users-grid">
         <div class="user-card">
-          <div class="user-icon">💪</div>
+          <svg class="user-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#4ade80"
+            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin: 0 auto 20px;">
+            <path d="M14.4 14.4 9.6 9.6" />
+            <path
+              d="M18.657 21.485a2 2 0 1 1-2.829-2.828l-1.767 1.768a2 2 0 1 1-2.829-2.829l6.364-6.364a2 2 0 1 1 2.829 2.829l-1.768 1.767a2 2 0 1 1 2.828 2.829z" />
+            <path d="m21.5 21.5-1.4-1.4" />
+            <path d="M3.9 3.9 2.5 2.5" />
+            <path
+              d="M6.404 2.757a2 2 0 1 0-2.829 2.828l1.768-1.767a2 2 0 1 0 2.829 2.828L1.808 13.01a2 2 0 1 0-2.829-2.829l1.767-1.768a2 2 0 1 0-2.829-2.828z" />
+          </svg>
           <h3>筋トレ・ボディメイク中の方</h3>
-          <p>外食でもタンパク質をしっかり摂りたい。ジムの後のご飯選びに最適。</p>
+          <p>外食でもタンパク質をしっかり摂りたい。<br>ジムの後のご飯選びに最適。</p>
         </div>
         <div class="user-card">
-          <div class="user-icon">🏃‍♀️</div>
+          <svg class="user-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#4ade80"
+            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin: 0 auto 20px;">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+          </svg>
           <h3>ダイエット中の方</h3>
-          <p>高タンパク・低カロリーな外食先を素早く見つけたい方に。</p>
+          <p>高タンパク・低カロリーな外食先を<br>素早く見つけたい方に。</p>
         </div>
         <div class="user-card">
-          <div class="user-icon">🏋️</div>
+          <svg class="user-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#4ade80"
+            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin: 0 auto 20px;">
+            <circle cx="12" cy="12" r="10" />
+            <circle cx="12" cy="12" r="6" />
+            <circle cx="12" cy="12" r="2" />
+          </svg>
           <h3>アスリート・トレーナー</h3>
-          <p>選手やクライアントへの外食先の推薦に活用。チームでの食事にも。</p>
+          <p>選手への外食先の推薦に活用。<br>チームでの食事にも。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- User Voices -->
+  <section class="user-voices" id="voices">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Voices</span>
+        <h2 class="section-title">ユーザーの<span class="gradient-text">声</span></h2>
+        <p class="section-subtitle">プロトタイプ版をご利用いただいた皆様から高い評価をいただいています。</p>
+      </div>
+      <div class="voices-grid">
+        <div class="voice-card">
+          <div class="voice-stars">⭐⭐⭐⭐⭐</div>
+          <p class="voice-text">「ジム帰りの外食選びが劇的に変わりました。感覚で選んでいたタンパク質量が可視化されるのは本当に便利！」</p>
+          <div class="voice-author">
+            <div class="author-avatar">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+            </div>
+            <div class="author-info">
+              <h4>K.Y さん</h4>
+              <span>20代 男性 / トレーニー</span>
+            </div>
+          </div>
+        </div>
+        <div class="voice-card">
+          <div class="voice-stars">⭐⭐⭐⭐⭐</div>
+          <p class="voice-text">「ダイエット中で外食に罪悪感がありましたが、pmapのおかげで高タンパク低脂質なお店をすぐに見つけられて安心できます。」</p>
+          <div class="voice-author">
+            <div class="author-avatar">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+            </div>
+            <div class="author-info">
+              <h4>M.A さん</h4>
+              <span>30代 女性 / 会社員</span>
+            </div>
+          </div>
+        </div>
+        <div class="voice-card">
+          <div class="voice-stars">⭐⭐⭐⭐⭐</div>
+          <p class="voice-text">「まさか身近なチェーン店のあのメニューがこんなに優秀だったなんて！という発見が沢山あって見ていて楽しいです。」</p>
+          <div class="voice-author">
+            <div class="author-avatar">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+            </div>
+            <div class="author-info">
+              <h4>S.T さん</h4>
+              <span>40代 男性 / 会社員</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq" id="faq">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">FAQ</span>
+        <h2 class="section-title">よくある<span class="gradient-text">質問</span></h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>利用料金はかかりますか？</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              基本的な機能（マップ検索、メニュー情報の閲覧など）はすべて完全無料でご利用いただけます。将来的に一部の高度な分析などを含むプレミアムプランの提供を予定していますが、日常的な利用において課金が必要になることはありません。
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>対応しているエリアはどこですか？</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>リリース初期は「東京都 新宿エリア」を中心としたチェーン店および主要な飲食店から対応を開始します。その後、渋谷、池袋、東京などの主要エリアから全国へと順次拡大していく予定です。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>掲載されている栄養素データは正確ですか？</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>各飲食チェーンが公式に発表している栄養成分情報をベースにデータベースを構築しています。一部の個人店など公式発表がない店舗については、AIを用いた独自の推定値（参考値）を明記の上で提供します。</p>
+          </div>
         </div>
       </div>
     </div>
@@ -498,7 +672,7 @@
         <div class="ea-content">
           <span class="section-tag">Early Access</span>
           <h2 class="ea-title">いち早く<span class="gradient-text">pmap</span>を<br>体験しませんか？</h2>
-          <p class="ea-description">現在、新宿エリアを対象に開発中です。リリース時に優先的にご案内します。</p>
+          <p class="ea-description">現在、新宿エリアを対象に開発中です。<br>リリース時に優先的にご案内します。</p>
           <form class="ea-form" id="earlyAccessForm">
             <div class="form-group">
               <input type="email" id="emailInput" placeholder="メールアドレスを入力" required autocomplete="email">
@@ -512,7 +686,11 @@
             <p class="form-note">🔒 スパムは送りません。リリース情報のみお届けします。</p>
           </form>
           <div class="ea-success" id="eaSuccess" style="display:none;">
-            <div class="success-icon">✅</div>
+            <svg class="success-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#22c55e"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin: 0 auto 16px;">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+              <polyline points="22 4 12 14.01 9 11.01" />
+            </svg>
             <h3>登録ありがとうございます！</h3>
             <p>リリース時にメールでお知らせします。</p>
           </div>
@@ -520,17 +698,32 @@
         <div class="ea-visual">
           <div class="ea-stats">
             <div class="ea-stat-card">
-              <span class="ea-stat-icon">🎯</span>
+              <svg class="ea-stat-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4ade80"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <circle cx="12" cy="12" r="6" />
+                <circle cx="12" cy="12" r="2" />
+              </svg>
               <span class="ea-stat-label">対象エリア</span>
               <span class="ea-stat-value">新宿</span>
             </div>
             <div class="ea-stat-card">
-              <span class="ea-stat-icon">📅</span>
+              <svg class="ea-stat-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4ade80"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                <line x1="16" x2="16" y1="2" y2="6" />
+                <line x1="8" x2="8" y1="2" y2="6" />
+                <line x1="3" x2="21" y1="10" y2="10" />
+              </svg>
               <span class="ea-stat-label">リリース予定</span>
               <span class="ea-stat-value">2026年</span>
             </div>
             <div class="ea-stat-card">
-              <span class="ea-stat-icon">💰</span>
+              <svg class="ea-stat-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4ade80"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" x2="12" y1="2" y2="22" />
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+              </svg>
               <span class="ea-stat-label">価格</span>
               <span class="ea-stat-value">無料</span>
             </div>
@@ -557,6 +750,8 @@
             <a href="#features">機能</a>
             <a href="#how-it-works">使い方</a>
             <a href="#preview">プレビュー</a>
+            <a href="#voices">ユーザーの声</a>
+            <a href="#faq">よくある質問</a>
           </div>
           <div class="footer-col">
             <h4>サポート</h4>

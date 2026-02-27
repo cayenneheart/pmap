@@ -658,7 +658,7 @@ img {
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
 }
 
@@ -692,7 +692,7 @@ img {
 }
 
 .feature-card-large {
-  grid-column: span 3;
+  grid-column: span 2;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
@@ -705,13 +705,21 @@ img {
 }
 
 .feature-icon-wrap {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   position: relative;
   z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: rgba(34, 197, 94, 0.1);
+  color: var(--green-400);
 }
 
 .feature-icon {
-  font-size: 2.5rem;
+  display: flex;
 }
 
 .feature-card h3 {
@@ -732,6 +740,10 @@ img {
 
 .feature-card p strong {
   color: var(--green-400);
+}
+
+.phrase {
+  display: inline-block;
 }
 
 .mini-pins {
@@ -781,7 +793,7 @@ img {
 
 .step-card {
   flex: 1;
-  max-width: 320px;
+  max-width: 360px;
   text-align: center;
   padding: 40px 32px;
   background: var(--bg-card);
@@ -867,6 +879,146 @@ img {
   width: 100%;
   display: block;
   border-radius: 40px;
+}
+
+/* ===========================
+   User Voices
+   =========================== */
+.user-voices {
+  padding: var(--section-padding);
+  background: var(--bg-primary);
+}
+
+.voices-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.voice-card {
+  padding: 32px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  transition: all 0.3s var(--ease);
+}
+
+.voice-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(34, 197, 94, 0.2);
+}
+
+.voice-stars {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  letter-spacing: 2px;
+}
+
+.voice-text {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
+.voice-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 20px;
+}
+
+.author-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.author-info h4 {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.author-info span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ===========================
+   FAQ
+   =========================== */
+.faq {
+  padding: var(--section-padding);
+  background: var(--bg-secondary);
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s var(--ease);
+}
+
+.faq-item.active {
+  border-color: rgba(34, 197, 94, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+  background: none;
+  border: none;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-main);
+}
+
+.faq-icon {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--green-400);
+  transition: transform 0.3s var(--ease);
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s var(--ease);
+}
+
+.faq-answer p {
+  padding: 0 24px 24px 24px;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
 }
 
 /* ===========================
@@ -1181,6 +1333,10 @@ img {
     grid-column: span 2;
   }
 
+  .voices-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .ea-wrapper {
     grid-template-columns: 1fr;
     padding: 40px;
@@ -1258,6 +1414,10 @@ img {
   }
 
   .users-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .voices-grid {
     grid-template-columns: 1fr;
   }
 
