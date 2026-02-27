@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initScrollReveal();
   initCountUp();
-  initEarlyAccess();
   initMockupDemo();
   initFAQ();
 });
@@ -123,38 +122,6 @@ function animateCounter(element, target) {
   requestAnimationFrame(update);
 }
 
-// ===========================
-// Early Access Form
-// ===========================
-function initEarlyAccess() {
-  const form = document.getElementById('earlyAccessForm');
-  const success = document.getElementById('eaSuccess');
-
-  if (!form) return;
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const email = document.getElementById('emailInput').value;
-    if (!email) return;
-
-    // Simulate form submission
-    const btn = form.querySelector('button[type="submit"]');
-    btn.innerHTML = '<span>送信中...</span>';
-    btn.disabled = true;
-
-    setTimeout(() => {
-      form.style.display = 'none';
-      success.style.display = 'block';
-      success.style.animation = 'fadeInUp 0.5s ease both';
-
-      // Store email in localStorage for demo
-      const emails = JSON.parse(localStorage.getItem('pmap_early_access') || '[]');
-      emails.push({ email, date: new Date().toISOString() });
-      localStorage.setItem('pmap_early_access', JSON.stringify(emails));
-    }, 1000);
-  });
-}
 
 // ===========================
 // FAQ Accordion
