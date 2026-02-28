@@ -14,6 +14,7 @@ export interface Restaurant {
   id: string;
   name: string;
   genre: string;
+  imageUrl?: string;
   latitude: number;
   longitude: number;
   address: string;

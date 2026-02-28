@@ -143,12 +143,13 @@ export default function MapScreen({ onSelectRestaurant }: Props) {
           >
             {filteredRestaurants.map((restaurant) => {
               const level = getProteinLevel(restaurant.maxProtein);
-              const levelColors = {
-                high: { text: '#22c55e', bg: 'rgba(34, 197, 94, 0.15)', border: 'rgba(34, 197, 94, 0.5)' },
-                mid: { text: '#facc15', bg: 'rgba(250, 204, 21, 0.15)', border: 'rgba(250, 204, 21, 0.5)' },
-                low: { text: '#f87171', bg: 'rgba(248, 113, 113, 0.15)', border: 'rgba(248, 113, 113, 0.5)' }
-              };
-              const col = levelColors[level];
+              const isSelected = selectedRestaurant?.id === restaurant.id;
+
+              const levelDotColor = {
+                high: '#22c55e',
+                mid: '#facc15',
+                low: '#f87171'
+              }[level];
 
               return (
                 <Marker
@@ -158,9 +159,21 @@ export default function MapScreen({ onSelectRestaurant }: Props) {
                     longitude: restaurant.longitude,
                   }}
                   onPress={() => handlePinPress(restaurant)}
+                  style={{ zIndex: isSelected ? 100 : 1 }}
                 >
-                  <View style={[styles.pinContainer, { backgroundColor: col.bg, borderColor: col.border }]}>
-                    <Text style={[styles.pinText, { color: col.text }]}>
+                  <View style={[
+                    styles.pinContainer,
+                    {
+                      backgroundColor: isSelected ? '#1E1E20' : '#FFFFFF',
+                      borderColor: isSelected ? '#1E1E20' : '#DDDDDD',
+                      transform: [{ scale: isSelected ? 1.1 : 1.0 }]
+                    }
+                  ]}>
+                    {!isSelected && <View style={[styles.pinDot, { backgroundColor: levelDotColor }]} />}
+                    <Text style={[
+                      styles.pinText,
+                      { color: isSelected ? '#FFFFFF' : '#000000' }
+                    ]}>
                       {restaurant.maxProtein}g
                     </Text>
                   </View>
@@ -237,22 +250,27 @@ const styles = StyleSheet.create({
   },
   pinContainer: {
     paddingHorizontal: 12,
-    paddingVertical: 6,
-    borderRadius: 100,
-    borderWidth: 1.5,
+    paddingVertical: 8,
+    borderRadius: 20,
+    borderWidth: 1,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    // Shadow for iOS / Elevation for Android
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.5,
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.15,
     shadowRadius: 4,
     elevation: 4,
   },
+  pinDot: {
+    width: 6,
+    height: 6,
+    borderRadius: 3,
+    marginRight: 4,
+  },
   pinText: {
-    fontSize: 13,
-    fontWeight: '800',
+    fontSize: 14,
+    fontWeight: '700',
   },
   resultBadge: {
     position: 'absolute',
